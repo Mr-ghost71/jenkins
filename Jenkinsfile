@@ -1,5 +1,6 @@
-node('test'){
+pipeline{
     
+    agent{ label 'test'}
     environment{
         DOCKERHUB_CREDENTIALS = credentials('saeed71-dockerhub')
     }

@@ -12,7 +12,7 @@ pipeline{
         }
         stage('Build'){
             steps{
-                sh 'docker build -t testshop'
+                sh 'docker build -t testshop .'
                 sh 'docker tag testshop:latest saeed71/testshop'
             }
         }

@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage('Cloning Git'){
             steps{
-                git url: 'https://github.com/cracksm4n/jenkins.git/'
+                git([url: 'https://github.com/cracksm4n/jenkins.git/', branch:'main'])
             }
         }
         stage('Build'){

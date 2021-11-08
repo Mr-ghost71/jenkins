@@ -24,6 +24,11 @@ pipeline{
         stage('Push'){
             steps{
                 sh 'docker push saeed71/testshop'
+            }    
+        }
+        stage('Run Container on dev server'){
+            steps{
+                sh 'docker run -p 80:80 -d saeed71/testshop'
             }
         }
     }

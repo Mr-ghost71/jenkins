@@ -1,0 +1,16 @@
+- name: first play
+  hosts: all
+  gather_facts: true
+  tasks:
+     - name: Free command
+       command: free -h 
+       register: server_free
+
+
+     - name: Show the server_free
+       debug:
+        msg: "{{ server_free }}"
+
+     - name: display ip v4
+       debug:
+          msg: IPv4 address is {{ ansible_facts.default_ipv4.address }}

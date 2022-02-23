@@ -1,0 +1,9 @@
+- name: Log into private registry and force re-authorization
+  hosts: all
+  tasks:
+     - name: Log into private registry and force re-authorization
+       docker_login:
+                registry: 192.168.1.11:9091
+                username: admin	
+                password: lksudnisjl
+                reauthorize: yes

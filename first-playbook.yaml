@@ -1,0 +1,12 @@
+- name: first play
+  hosts: all
+  tasks:
+     - name: Create a new file
+       file:
+          path: /tmp/foo.txt
+          mode: 0664
+          owner: saeed
+          state: touch
+
+     - name: create groups
+       import_tasks: group-tasks.yaml 

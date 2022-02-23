@@ -1,0 +1,12 @@
+- name: Print Dictionary
+  hosts: all
+  vars:
+    employee:
+       name: "saeed naderi"
+       title: "Devops"
+       company: "Linux Handbook"
+  tasks:
+    - name: Print employee Dictionary
+      debug:
+         msg: "{{item}}"
+      loop: "{{employee | dict2items}}"

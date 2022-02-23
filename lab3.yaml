@@ -1,0 +1,14 @@
+- name: first play
+  hosts: all
+  tasks:
+    - name: install nmap
+      package:
+        name: nmap
+        state: present
+
+    - name: Create home archive
+      archive:
+        path: /home
+        dest: /tmp/home.tar.xz
+        format: bz2
+      tags: archive

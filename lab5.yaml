@@ -1,0 +1,7 @@
+- name: Print even numbers
+  hosts: all
+  tasks: 
+    - name: Print even numbers
+      debug:
+        msg: "{{ item }}"
+      loop: "{{ range(20,41,2) | list }}"

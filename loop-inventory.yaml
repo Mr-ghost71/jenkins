@@ -1,0 +1,7 @@
+- name: loop inventory
+  hosts: node12
+  tasks:
+    - name: loop inventory
+      debug:
+        msg: "{{ item }}" 
+      loop: "{{ groups['all'] }}"
